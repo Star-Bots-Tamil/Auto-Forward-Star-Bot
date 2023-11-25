@@ -26,11 +26,11 @@ with open(config_name, "r") as data:
     CONFIG = json.load(data)
 
 
-API_KEY = getenv("API_KEY", "6048853727:AAG2DBabWriwu3BdKguYH6YHWdgqMbS40r4")
-if not BOT_TOKEN:
+API_KEY = getenv("API_KEY", "6460834619:AAHyB5jkF2QXpSaCW620YmbdvFVztfcHwSM")
+if not API_KEY:
     LOGGER.error("No API_KEY token provided!")
     exit(1)
 OWNER_ID = int(getenv("OWNER_ID", "1391556668"))
-REMOVE_TAG = getenv("REMOVE_TAG", "False") in {"true", "True", 1}
+REMOVE_TAG = getenv("REMOVE_TAG", "True") in {"true", "True", 1}
 
 bot = ApplicationBuilder().token(BOT_TOKEN).build()
